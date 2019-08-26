@@ -21,4 +21,11 @@ USER notroot
 
 # Mount config to /etc/nzbget.conf
 ENTRYPOINT [ "/usr/bin/nzbget" ]
-CMD [ "--server", "--option OutputMode=log","--option CreateLog=no","--option ControlPassword=''","--option InterDir==/incomplete","--option TempDir=/tmp","--option NzbDir=/watch","--option DestDir=/downloads"]
+CMD [ "--server",                   \
+    "-o", "OutputMode=log",         \
+    "-o", "CreateLog=no",           \
+    "-o", "ControlPassword=''",     \
+    "-o", "InterDir==/incomplete",  \
+    "-o", "TempDir=/tmp",           \
+    "-o", "NzbDir=/watch",          \
+    "-o", "DestDir=/downloads"]
