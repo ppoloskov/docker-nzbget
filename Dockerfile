@@ -25,7 +25,7 @@ CMD [ "--server",                   \
     "-o", "OutputMode=log",         \
     "-o", "CreateLog=no",           \
     "-o", "ControlPassword=''",     \
-    "-o", "InterDir==/incomplete",  \
+    "-o", "InterDir=/incomplete",   \
     "-o", "TempDir=/tmp",           \
     "-o", "NzbDir=/watch",          \
     "-o", "DestDir=/downloads"]
