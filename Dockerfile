@@ -13,7 +13,7 @@ RUN apk add --no-cache ca-certificates tzdata nzbget --repository http://dl-cdn.
 
 EXPOSE 6789
 
-HEALTHCHECK CMD netstat -an | grep 9091 > /dev/null; if [ 0 != $? ]; then exit 1; fi;
+HEALTHCHECK CMD netstat -an | grep 6789 > /dev/null; if [ 0 != $? ]; then exit 1; fi;
 
 VOLUME ["/config", "/downloads", "/watch", "/incomplete"]
 
