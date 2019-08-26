@@ -24,6 +24,7 @@ ENTRYPOINT [ "/usr/bin/nzbget" ]
 CMD [ "--server",                   \
     "-o", "OutputMode=log",         \
     "-o", "CreateLog=no",           \
+    "-o", "ControlUsername=''",     \
     "-o", "ControlPassword=''",     \
     "-o", "InterDir=/incomplete",   \
     "-o", "TempDir=/tmp",           \
