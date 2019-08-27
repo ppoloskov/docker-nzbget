@@ -5,7 +5,7 @@ ENV PUID 1001
 ENV PGID 1001
 ENV TZ "Europe/Moscow"
 
-RUN apk add --no-cache ca-certificates tzdata nzbget --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
+RUN apk add --no-cache unzip unrar ca-certificates tzdata nzbget --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
     addgroup -g ${PGID} notroot && \
     adduser -D -H -G notroot -u ${PUID} notroot && \
     mkdir /config /downloads /watch /incomplete && \
